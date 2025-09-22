@@ -1,0 +1,126 @@
+
+@import url('pagina_inicial.css');
+
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.group-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 0;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.card-icon-bg {
+    width: 35px;
+    height: 35px;
+    background-color: #e6e6fa;
+    border-radius: 50%;
+}
+
+.card-dots {
+    font-size: 1.5em;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-image-placeholder {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: #999;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.card-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    color: #1a1a1a;
+}
+
+.course-info {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+.course-sub-info {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4a67ff;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-sair {
+    background-color: #fff;
+    color: #4a67ff;
+}
+
+.btn-sair:hover {
+    background-color: #4a67ff;
+    color: #fff;
+}
+
+.btn-entrar {
+    background-color: #4a67ff;
+    color: #fff;
+}
+
+.btn-entrar:hover {
+    background-color: #3851cc;
+}

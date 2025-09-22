@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portal do Aluno</title>
+    <link rel="stylesheet" href="paginaLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="split-container">
+        <div class="left-panel">
+            <div class="logo-area">
+                <img src="https://via.placeholder.com/100x30?text=Logo+UNIFAA" alt="Logo UNIFAA">
+            </div>
+            <div class="login-content">
+                <h2>Login</h2>
+                <p class="subtitle">Entre na sua conta</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="raInput">RA</label>
+                        <input type="text" id="raInput" placeholder="RA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaInput">Senha</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="senhaInput" placeholder="Senha" required>
+                            <i class="fas fa-eye password-toggle" id="passwordToggle"></i>
+                        </div>
+                    </div>
+                    <p class="forgot-password">Esqueceu a senha?</p>
+                    <p class="error-message" id="errorMessage" style="display: none;">RA ou senha incorretos. Por favor, tente novamente.</p>
+                    <button id="loginButton" type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="welcome-content">
+                <h1>Bem-vindo <span>ao</span></h1>
+                <h2>Portal do Aluno</h2>
+                <p>Faça login para acessar sua conta</p>
+            </div>
+            <div class="illustration">
+                </div>
+        </div>
+    </div>
+    <script src="paginaLogin.js"></script>
+</body>
+</html>

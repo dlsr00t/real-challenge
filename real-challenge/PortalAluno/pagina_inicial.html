@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - Página Inicial</title>
+    <link rel="stylesheet" href="pagina_inicial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-header">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <ul>
+                <li><a href="pagina_inicial.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+                <li><a href="grupos_de_estudo.html"><i class="fas fa-users"></i> Grupos de Estudo</a></li>
+                <li><a href="calendario.html"><i class="fas fa-calendar-alt"></i> Calendário de Evento</a></li>
+            </ul>
+        </div>
+
+        <div class="content-wrapper">
+            <header class="top-header">
+                <div class="menu-hamburguer" id="menuHamburguer">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Na dúvida, publique! O que você quer dizer hoje?">
+                    <i class="fas fa-times clear-search"></i>
+                </div>
+                <div class="user-profile">
+                    <span>Aluno - RA: E47259</span>
+                    <i class="fas fa-user-circle user-avatar-icon"></i>
+                    <i class="fas fa-bell notification-icon"></i>
+                </div>
+            </header>
+
+            <div class="feed-container">
+                <div class="post-card">
+                    <div class="post-image-preview">
+                        <img src="https://via.placeholder.com/400x200?text=Preview+UX/UI+Mobile+Developer" alt="Preview UX/UI Mobile Developer">
+                    </div>
+                    <div class="post-content-area">
+                        <div class="post-header-meta">
+                            <h3>Data de Entrega do Trabalho UX/UI</h3>
+                            <span class="post-author">Natan do Egito Roldão</span>
+                        </div>
+                        <p>ontem estava dizendo que era pra o dia 02 de dezembro e hoje já alterou!</p>
+                        <p>Alguém poderia me dizer se a entrega dos trabalhos é ate dia 18 mesmo, no portal do aluno esta notificando o encerramento das atividades no ava no dia 02, alguém consegue me dizer?</p>
+                        <div class="comment-section">
+                            <div class="comment-item">
+                                <span class="comment-avatar">G</span>
+                                <div class="comment-text">
+                                    <strong>Gustavo Trontes</strong>
+                                    <p>"Estou tendo o mesmo problema! Alguém ajuda?"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-image-preview">
+                        <img src="https://via.placeholder.com/400x200?text=Zoom+Error" alt="Zoom Error">
+                    </div>
+                    <div class="post-content-area">
+                        <div class="post-header-meta">
+                            <h3>Erro ao acessar a aula no ZOOM</h3>
+                            <span class="post-author">Douglas Gonçalves</span>
+                        </div>
+                        <p>mais alguém não esta conseguindo acessar a aula ao vivo?</p>
+                        <p>Já tentei acessar pelo AVA e não consigo entrar na sala do ZOOM, alguém com este problema também?</p>
+                        <div class="comment-section">
+                            <div class="comment-item">
+                                <span class="comment-avatar">A</span>
+                                <div class="comment-text">
+                                    <strong>Anderson Fagundes</strong>
+                                    <p>"Estou tendo o mesmo problema! Alguém ajuda?"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-icon" id="chatIcon">
+                <i class="fas fa-comments"></i>
+                <span class="chat-badge">1</span>
+            </div>
+        </div>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h4>Chat</h4>
+                <i class="fas fa-times chat-close-btn"></i>
+            </div>
+            <div class="chat-body">
+                <div class="chat-message">
+                    <span class="message-sender">Natan do Egito Roldão</span>
+                    <p>Olá, pessoal! Alguém para grupo de estudo de UI/UX?</p>
+                </div>
+                <div class="chat-message received">
+                    <span class="message-sender">Gustavo Trontes</span>
+                    <p>Opa, eu topo! Qual horário fica bom?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" placeholder="Digite uma mensagem...">
+                <i class="fas fa-paper-plane send-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="pagina_inicial.js"></script>
+</body>
+</html>
