@@ -5,29 +5,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const senhaInput = document.getElementById('senhaInput');
     const errorMessage = document.getElementById('errorMessage');
     const passwordToggle = document.getElementById('passwordToggle'); 
+    const API_BASE_URL = 'http://localhost:4000';
 
 
     if (loginButton) {
-        loginButton.addEventListener('click', function(event) {
-           
+        loginButton.addEventListener('click', async function(event) {
             event.preventDefault();
+            errorMessage.style.display = 'none';
 
-            
-            const raCorreto = 'E47259';
-            const senhaCorreta = 'E47259';
-
-            
             const raDigitado = raInput.value.trim();
             const senhaDigitada = senhaInput.value.trim();
 
-           
-            if (raDigitado === raCorreto && senhaDigitada === senhaCorreta) {
-              
-                errorMessage.style.display = 'none';
-                window.location.href = 'pagina_inicial.html';
-            } else {
-               
+            if (!raDigitado || !senhaDigitada) {
+                errorMessage.textContent = 'Informe RA e senha.';
                 errorMessage.style.display = 'block';
+                return;
+            }
+
+            loginButton.disabled = true;
+            loginButton.textContent = 'Entrando...';
+
+            try {
+                const resposta = await fetch(`${API_BASE_URL}/api/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ ra: raDigitado, senha: senhaDigitada })
+                });
+
+                const payload = await resposta.json();
+
+                if (!resposta.ok) {
+                    throw new Error(payload.message || 'Falha no login');
+                }
+
+                localStorage.setItem('portalAlunoToken', payload.token);
+                localStorage.setItem('portalAlunoUser', JSON.stringify(payload.user));
+                window.location.href = 'pagina_inicial.html';
+            } catch (error) {
+                errorMessage.textContent = error.message || 'Não foi possível realizar o login.';
+                errorMessage.style.display = 'block';
+            } finally {
+                loginButton.disabled = false;
+                loginButton.textContent = 'Login';
             }
         });
     }
