@@ -124,3 +124,12 @@
 .btn-entrar:hover {
     background-color: #3851cc;
 }
+
+.capa{
+    width: auto;
+    max-width: 100%;    
+    height: auto;  
+    object-fit: cover;
+    border-radius: 12%;
+    overflow: hidden;
+}

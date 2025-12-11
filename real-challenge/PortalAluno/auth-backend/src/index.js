@@ -9,7 +9,7 @@ const { getUserByRa } = require('./db');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret';
-const TOKEN_EXPIRATION = process.env.TOKEN_EXPIRATION || '2h';
+const TOKEN_EXPIRATION = process.env.TOKEN_EXPIRATION || '10m';
 
 app.use(cors());
 app.use(express.json());
